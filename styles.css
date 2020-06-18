@@ -1,0 +1,213 @@
+:root{
+    --success: #43A457;
+    --error: #E25A76;
+    --background: #FEEBEF;
+}
+
+body{
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}
+
+.layout{
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.page{
+    height: 100vh;
+    width: 1060px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.Bussquiz{
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 84vw;
+    width: 100%;
+    margin: auto;
+    background: var(--background);
+    box-shadow: 0px 30px 40px rgba(133, 73, 86, 0.210598), 0px 0px 4px rgba(0, 0, 0, 0.0942595);
+    color: white;
+    padding: 17% 5% 0;
+    background-image: url('./images/dotbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Bussquiz__backgrounds{
+    display: contents;
+}
+
+.Bussquiz__header{
+    width: fit-content;
+    position: relative;
+}
+
+.Bussquiz__label{
+    width: 66px;
+    height: 47px;
+    position: absolute;
+    right: -6%;
+    bottom: 90%;
+}
+
+.Bussquiz__label span{
+    font-size: 18px;
+    position: absolute;
+    top: 14%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.Bussquiz__title{
+    color: black;
+    font-size: calc(20px + 14 * ((100vw - 320px) / 320));
+    font-weight: 900;
+    line-height: 1.2em;
+    display: block;
+}
+
+.Bussquiz__description{
+    display: block;
+    color: black;
+    font-size: calc(14px + 4 * ((100vw - 320px) / 320));
+    margin-top: 2%;
+    font-weight: 500;
+}
+
+.Bussquiz__tinkoff{
+    width: 20%;
+    background-image: url('./images/tinkoff.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    top: -3%;
+    left: 25%;
+}
+
+.Bussquiz__tinkoff::before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.Bussquiz__dollars{
+    width: 25%;
+    background-image: url('./images/dollars.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 25%;
+    left: 10%;
+    position: absolute;
+}
+
+.Bussquiz__dollars::before{
+    content: '';
+    display: block;
+    padding-top: 80%;
+}
+
+.Bussquiz__hands{
+    width: 55%;
+    background-image: url('./images/hands.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.Bussquiz__hands::before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.Bussquiz__actions{
+    margin: 0 0 7%;
+}
+
+.Bussquiz__button{
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    padding: 3vw 7vw;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+@media (min-width: 470px){
+    .Bussquiz{
+        padding: 20% 7% 0;
+    }
+    .Bussquiz__actions{
+        margin: 0 0 8%;
+    }
+    .Bussquiz__button{
+        font-size: 22px;
+        padding: 2.5vw 5vw;
+    }
+}
+
+@media (min-width: 640px){
+    .Bussquiz{
+        max-width: 640px;
+        height: 536px;
+        padding: 120px 40px 0;
+    }
+    .Bussquiz__title{
+        font-size: 34px;
+    }
+    .Bussquiz__description{
+        font-size: 18px;
+    }
+    .Bussquiz__button{
+        padding: 17px 32px;
+    }
+}
+
+@media (min-width: 1240px){
+    .Bussquiz{
+        max-width: 1060px;
+    }
+    .Bussquiz__tinkoff{
+        width: 93px;
+        top: 10%;
+        left: 60%;
+    }
+    .Bussquiz__tinkoff::before{
+        padding-top: 113px;
+    }
+    .Bussquiz__dollars{
+        width: 197px;
+        left: 35%;
+    }
+    .Bussquiz__dollars::before{
+        padding-top: 147px;
+    }
+    .Bussquiz__hands{
+        width: 434px;
+    }
+    .Bussquiz__hands::before{
+        padding-top: 413px;
+    }
+    .Bussquiz__actions{
+        margin-bottom: 40px;
+    }
+    .Bussquiz__button{
+        padding: 15px 35px;
+    }
+}
