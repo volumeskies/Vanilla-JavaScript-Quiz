@@ -160,7 +160,7 @@
             //Showing result message
             var question = document.querySelector('.Bussquiz__question');
             question.classList.toggle('Bussquiz__result');
-            question.textContent = appResult.getResultComment(appQuiz.getCorrAnswCount());
+            question.innerHTML = appResult.getResultComment(appQuiz.getCorrAnswCount());
             //Showing result image
             var resultBg = document.createElement('div');
             resultBg.classList.add(appResult.getImage(appQuiz.getCorrAnswCount()), 'result-bg');
@@ -174,29 +174,42 @@
             return link;
         }
 
+        function createImage(){
+            var img = document.createElement('img');
+            return img;
+        }
+
         function createLinksWrapper(){
             var linksWrapper = document.createElement('div');
             linksWrapper.classList.add('Bussquiz__link');
             for(var i = 0; i < 3; i++){
                 var link = createLink();
+                var img = createImage();
                 switch(i){
                     case 0:
                         link.classList.add('Bussquiz__link-facebook');
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
-                        link.href = 'https://youtu.be/dQw4w9WgXcQ'
+                        link.href = 'https://youtu.be/dQw4w9WgXcQ';
+                        img.src = './images/facebook.png';
+                        link.append(img);
+                        link.innerHTML += 'Поделиться';
                         break;
                     case 1:
                         link.classList.add('Bussquiz__link-vk');
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
-                        link.href = 'https://youtu.be/dQw4w9WgXcQ'
+                        link.href = 'https://youtu.be/dQw4w9WgXcQ';
+                        img.src = './images/vk.png';
+                        link.append(img);
                         break;
                     case 2:
                         link.classList.add('Bussquiz__link-twitter');
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
-                        link.href = 'https://youtu.be/dQw4w9WgXcQ'
+                        link.href = 'https://youtu.be/dQw4w9WgXcQ';
+                        img.src = './images/twitter.png';
+                        link.append(img);
                         break;
                 }
                 linksWrapper.append(link);
