@@ -1,23 +1,23 @@
 var resultHandling = (function(){
     var resultObj = {
         '0':{
-            comment: 'Мне больше интересен футбол',
+            comment: 'Мне больше<br>интересен футбол',
             image: 'imgAnswer1'
         },
         '3':{
-            comment: 'Читаю vc.ru с экрана попутчика в метро',
+            comment: 'Читаю vc.ru<br>с экрана попутчика в метро',
             image: 'imgAnswer2'
         },
         '5':{
-            comment: 'Бизнес это интересно, но где взять столько времени?',
+            comment: 'Бизнес это интересно,<br> но где взять столько времени?',
             image: 'imgAnswer3'
         },
         '7':{
-            comment: 'Читаю vc.ru каждый день, но работать тоже нужно',
+            comment: 'Читаю vc.ru каждый<br> день, но работать тоже нужно',
             image: 'imgAnswer4'
         },
         '8':{
-            comment: 'Я работаю в редакции vc.ru',
+            comment: 'Я работаю<br> в редакции vc.ru',
             image: 'imgAnswer5'
         }
     }
